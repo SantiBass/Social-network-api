@@ -1,8 +1,8 @@
 // create thought models using mongoose
 const {Schema, model, Types} = require('mongoose');
 const moment = require('moment');
-const { create } = require('./User');
-const { format } = require('path/posix');
+// const { create } = require('./User');
+// const { format } = require('path/posix');
 const { Thought } = require('.');
 const ThoughtSchema = new Schema({
     // add thoughtText, createdAt, usermane and reactions

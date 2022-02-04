@@ -39,7 +39,7 @@ const userController = {
       .catch(err => res.json(err));
   },
 
-  // update pizza by id
+  // update User by id
   updateUser({ params, body }, res) {
     User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
       .then(dbUserData => {

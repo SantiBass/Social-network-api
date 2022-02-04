@@ -1,68 +1,68 @@
 const { Thought, User } = require('../models');
 
-const userController = {
+const thoughtController = {
   // get all thought
   getAll(req, res) {
-    User.find({})
+    Thoutght.find({})
       .populate({
         path: 'thoughts',
         select: '-__v'
       })
       .select('-__v')
       .sort({ _id: -1 })
-      .then(dbUserData => res.json(dbUserData))
+      .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => {
         console.log(err);
         res.sendStatus(400);
       });
   },
 
-  // get one user by id
-  getUserById({ params }, res) {
-    Pizza.findOne({ _id: params.id })
+  // get one Thoutght by id
+  getThoutghtById({ params }, res) {
+    Thought.findOne({ _id: params.id })
       .populate({
         path: 'thoughts',
         select: '-__v'
       })
       .select('-__v')
-      .then(dbUserData => res.json(dbUserData))
+      .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => {
         console.log(err);
         res.sendStatus(400);
       });
   },
 
-  // createUser
-  createUser({ body }, res) {
-    User.create(body)
-      .then(dbUserData => res.json(dbUserData))
+  // create thought
+  createThoutght({ body }, res) {
+    Thoutght.create(body)
+      .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => res.json(err));
   },
 
-  // update pizza by id
-  updateUser({ params, body }, res) {
-    Pizza.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
-      .then(dbPizzaData => {
-        if (!dbPizzaData) {
-          res.status(404).json({ message: 'No user found with this id!' });
+  // update Thought by id
+  updateThoutght({ params, body }, res) {
+    Thought.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
+      .then(dbThoughtData => {
+        if (!dbThoughtData) {
+          res.status(404).json({ message: 'No Thoutght found with this id!' });
           return;
         }
-        res.json(dbUserData);
+        res.json(dbThoughtData);
       })
       .catch(err => res.json(err));
   },
 
-  // delete user
-  deleteUser({ params }, res) {
-    User.findOneAndDelete({ _id: params.id })
-      .then(dbUserData => res.json(dbUserData))
+  // delete Thoutght
+  deleteThoutght({ params }, res) {
+    Thoutght.findOneAndDelete({ _id: params.id })
+      .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => res.json(err));
   },
 // delete friend
 removeFriend({ params}, res) {
-    User.findOneAndUpdate(
+    Thoutght.findOneAndUpdate(
         {
-            _id: params.getUserById
+            _id: params.getThoutghtById
         },
         {
             $pull: {
@@ -78,4 +78,4 @@ removeFriend({ params}, res) {
 
 };
 
-module.exports = pizzaController;
+module.exports = thoughtController;
