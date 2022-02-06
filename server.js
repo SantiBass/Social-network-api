@@ -9,8 +9,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/SOCIAL-NETWOR-API',{
- userNewUrlParser: true,
- userUnifiedTopology: true   
+useFindAndModify: false, 
+userNewUrlParser: true,
+userUnifiedTopology: true   
 });
 mongoose.set('debug', true);
 app.use(require('./routes'));
