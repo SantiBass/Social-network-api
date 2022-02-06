@@ -3,7 +3,7 @@ const { Thought, User } = require('../models');
 const thoughtController = {
   // get all thought
   getAllThoughts(req, res) {
-    Thoutght.find({})
+    Thought.find({})
       .populate({
         path: 'user',
         select: '-__v'
@@ -34,10 +34,63 @@ const thoughtController = {
 
   // create thought
   createThoutght({ body }, res) {
-    Thoutght.create(body)
+    Thought.create(body)
+        .then(({_id}) =>{
+        return User.findOneAndUpdate(
+            {
+            username: params.username
+           },
+           {
+               $push: {thoughts: _id}
+           },
+           {
+               new: true, 
+           }
+        )
+        }).then(dbUsertData => {
+            if (!dbUserData) {
+              res.status(404).json({ message: 'No user found with this username!' });
+              return;
+            }
+            res.json(dbUserData);
+          })
+          .catch(err => res.json(err));
+     },
+  addReaction({params, body}, res){
+      Thought.findOneAndUpdate(
+        {
+             _id: params.thoughtId
+        },
+        {
+            $push: {reactions: body}
+        },
+        {
+            new: true, runValidators: true
+        }
+      ) .then(dbThoughtData => {
+        if (!dbThoughtData) {
+          res.status(404).json({ message: 'No Thoutght found with this id!' });
+          return;
+        }
+        res.json(dbThoughtData);
+      })
+      .catch(err => res.json(err));
+  },
+  deleteReaction({ params }, res) {
+    Thought.findOneAndUpdate(
+        {
+         _id: params.thoughtId
+        },
+        {
+          $pull: { reactions: body}  
+        },
+        {
+            nwe: true
+        })
       .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => res.json(err));
   },
+
 
   // update Thought by id
   updateThoutght({ params, body }, res) {
@@ -54,27 +107,10 @@ const thoughtController = {
 
   // delete Thoutght
   deleteThoutght({ params }, res) {
-    Thoutght.findOneAndDelete({ _id: params.id })
+    Thought.findOneAndDelete({ _id: params.id })
       .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => res.json(err));
   },
-// delete friend
-removeFriend({ params}, res) {
-    Thoutght.findOneAndUpdate(
-        {
-            _id: params.getThoutghtById
-        },
-        {
-            $pull: {
-                friends: params.friendId
-            }
-        },
-        {
-            new:true
-        }   
-    )
-}
-  
 
 };
 
