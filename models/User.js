@@ -1,6 +1,7 @@
 // create  user models using mongoose
 const {Schema, model} = require('mongoose');
-const { Thought } = require('.');
+
+// const { Thought } = require('.');
 // const { User } = require('.User');
 const  UserSchema =  new Schema (
     {

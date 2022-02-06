@@ -19,7 +19,7 @@ router
     .route('/:id')
     .get(getUserById)
     .put(updateUser)
-    .delte(deleteUser)
+    .delete(deleteUser)
 
     // route to add and remove friends
 router  

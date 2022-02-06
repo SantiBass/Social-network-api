@@ -43,7 +43,7 @@ const ThoughtSchema = new Schema({
         maxlenth: 280,
     },
     createdAt: {
-        type: true,
+        type: Date,
         defult: Date.now,
         get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a') 
     },
