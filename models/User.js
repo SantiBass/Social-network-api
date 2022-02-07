@@ -20,7 +20,7 @@ const  UserSchema =  new Schema (
     createdAt:{
         type: Date,
         default: Date.now,
-        get: (createdAtVal) => moment(createdAtVal).format('MM, DD, YYYY, hh:mm:ss') 
+        get: (createdAtVal) => moment(createdAtVal).format('MMMM, Do, YYYY, h:mm:ss a') 
     },
     thoughts:[
         {
