@@ -1,6 +1,6 @@
 // create  user models using mongoose
 const {Schema, model} = require('mongoose');
-
+const moment = require('moment')
 // const { Thought } = require('.');
 // const { User } = require('.User');
 const  UserSchema =  new Schema (
@@ -16,6 +16,11 @@ const  UserSchema =  new Schema (
         type:   String,
         unique: true,
         match:  [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Enter a valid email! Ex: test@test.com']
+    },
+    createdAt:{
+        type: Date,
+        default: Date.now,
+        get: (createdAtVal) => moment(createdAtVal).format('MM, DD, YYYY, hh:mm:ss') 
     },
     thoughts:[
         {
