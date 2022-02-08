@@ -1,11 +1,10 @@
 // create  user models using mongoose
 const {Schema, model} = require('mongoose');
 const moment = require('moment')
-// const { Thought } = require('.');
-// const { User } = require('.User');
+
 const  UserSchema =  new Schema (
     {
-        // Add these four attributes to your schema: username, password, email, userCreated
+        // Add these four attributes to your schema: username, email, userCreated, thought
 
     username: {
         type: String,
@@ -20,7 +19,7 @@ const  UserSchema =  new Schema (
     createdAt:{
         type: Date,
         default: Date.now,
-        // get: (createdAtVal) => moment(createdAtVal).format('MMMM, Do, YYYY, h:mm:ss a') 
+        
     },
     thoughts:[
         {

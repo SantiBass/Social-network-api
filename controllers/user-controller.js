@@ -63,12 +63,10 @@ const userController = {
         new: true, runValidators: true
       }
     ).then(dbUserData => {
-      console.log('fdsgsdfgsfdgsfdgsfdgsfdgsdf');
-      if (!dbUserData) { console.log('fdsgsdfgsfdgsfdgsfdgsfdgsdf');
+      if (!dbUserData) {
         res.status(404).json({ message: 'No user found with this username!' });
         return;
       }
-      console.log('fdsgsdfgsfdgsfdgsfdgsfdgsdf');
       res.json(dbUserData);
     })
     .catch(err => res.json(err));

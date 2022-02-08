@@ -1,10 +1,6 @@
 // create thought models using mongoose
 const {Schema, model, Types} = require('mongoose');
 const moment = require('moment');
-// const { create } = require('./User');
-// const { format } = require('path/posix');
-// const { Thought } = require('.');
-
 const ReactionsSchema = new Schema({
     reactionId:{
         type: Schema.Types.ObjectId,
@@ -23,7 +19,7 @@ const ReactionsSchema = new Schema({
     createdAt:{
         type: Date,
         default: Date.now,
-        // get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a') 
+        
     }
 
 },
@@ -45,7 +41,7 @@ const ThoughtSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-        // get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a') 
+       
     },
     username: {
         type: String,
@@ -65,10 +61,7 @@ const ThoughtSchema = new Schema({
    
 );
 
-//  getting total counst of thoughts
-// ThoughtSchema.virtual('reactionCount').get(function() {
-//     return this.reaction.length;
-// });
+
 const Thought = model('Thought', ThoughtSchema);
 
 module.exports = Thought
