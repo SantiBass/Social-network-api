@@ -63,11 +63,12 @@ const userController = {
         new: true, runValidators: true
       }
     ).then(dbUserData => {
-      console.log(dbUserData)
-      if (!dbUserData) {
+      console.log('fdsgsdfgsfdgsfdgsfdgsfdgsdf');
+      if (!dbUserData) { console.log('fdsgsdfgsfdgsfdgsfdgsfdgsdf');
         res.status(404).json({ message: 'No user found with this username!' });
         return;
       }
+      console.log('fdsgsdfgsfdgsfdgsfdgsfdgsdf');
       res.json(dbUserData);
     })
     .catch(err => res.json(err));
@@ -83,7 +84,7 @@ const userController = {
 deleteFriend({ params}, res) {
     User.findOneAndUpdate(
         {
-            _id: params.getUserById
+            _id: params.userId
         },
         {
             $pull: {
@@ -93,7 +94,8 @@ deleteFriend({ params}, res) {
         {
             new:true
         }   
-    )
+    ) .then(dbUserData => res.json(dbUserData))
+    .catch(err => res.json(err));
 }
   
 
