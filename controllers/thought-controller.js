@@ -85,10 +85,10 @@ const thoughtController = {
          _id: params.thoughtId
         },
         {
-          $pull: { reactions: body}  
+          $pull: { reactions: {reactionId: params.reactionId}}  
         },
         {
-            new: true
+            new: true,
         })
       .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => res.json(err));
