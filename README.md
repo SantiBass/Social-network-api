@@ -42,11 +42,11 @@
 
 ## Screenshots.
 #### Here are some screenshots of the application.
-##### Screenshot of the "Create user" end point.
+##### Screenshot of the "Create user" screen.
 ![Creating-User](https://user-images.githubusercontent.com/90415841/153060121-f747d9a9-790a-46f4-8525-50ac759a05cf.png)
-#### Screenshot of the "Creating Thought" end point. 
+#### Screenshot of the "Creating Thought" screen. 
 ![Creating-Thought](https://user-images.githubusercontent.com/90415841/153060143-649c8ae0-9771-4812-a475-f19a67444ab9.png)
-#### Screenshot of the "Adding new friend" end point.
+#### Screenshot of the "Adding new friend" end screen.
 ![Adding-new-Friend](https://user-images.githubusercontent.com/90415841/153060153-e1fc84e3-00f4-4429-a7fb-91b9164939a1.png)
 
 
