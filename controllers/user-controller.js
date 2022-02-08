@@ -51,7 +51,7 @@ const userController = {
       })
       .catch(err => res.json(err));
   },
-  addNewFriend({params, body}, res){
+  addNewFriend({params }, res){
     User.findOneAndUpdate(
       { 
         _id: params.userId
@@ -62,9 +62,16 @@ const userController = {
       {
         new: true, runValidators: true
       }
-    ).then(dbUserData => res.json(dbUserData))
+    ).then(dbUserData => {
+      console.log(dbUserData)
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this username!' });
+        return;
+      }
+      res.json(dbUserData);
+    })
     .catch(err => res.json(err));
-  },
+    },
 
   // delete user
   deleteUser({ params }, res) {

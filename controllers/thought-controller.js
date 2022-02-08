@@ -10,7 +10,8 @@ const thoughtController = {
       })
       .select('-__v')
       .sort({ _id: -1 })
-      .then(dbThoughtData => res.json(dbThoughtData))
+      .then(dbThoughtData => {
+          res.json(dbThoughtData)})
       .catch(err => {
         console.log(err);
         res.sendStatus(400);
@@ -34,11 +35,12 @@ const thoughtController = {
 
   // create thought
   createThoutght({ body }, res) {
-    Thought.create(body)
-        .then(({_id}) =>{
+    console.log(body)
+    Thought.create(body).then(({_id}) =>{
+      console.log(_id)
         return User.findOneAndUpdate(
             {
-            username: params.username
+            username: body.username
            },
            {
                $push: {thoughts: _id}
@@ -47,7 +49,8 @@ const thoughtController = {
                new: true, 
            }
         )
-        }).then(dbUsertData => {
+        }).then(dbUserData => {
+          console.log(dbUserData)
             if (!dbUserData) {
               res.status(404).json({ message: 'No user found with this username!' });
               return;
