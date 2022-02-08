@@ -6,8 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description.
-#### "The Social Network API" is an application that allows the users to create, add, update and or delete, users. Also, the users are able to add a friends, create or delete thoughts, or reactions.
-## Table of Content
+#### "The Social Network API" is an application that allows the users to create, add, update, and/or delete users. Also, the users are able to add friends, and create or delete thoughts or reactions.
+## Table of Contents
 * [Installation](#installation)
 * [License](#license)
 * [Usage](#usage)
@@ -18,7 +18,7 @@
 * [Questions](#questions)
 
 ## Installation
-#### For this application [Mongoose](https://www.npmjs.com/package/mongoose) and [Express](https://www.npmjs.com/package/express) dependencies were installed in [Visual Studio Code](https://code.visualstudio.com/) by typing "npm i mongoose" and "npm i express".
+#### For this application, [Mongoose](https://www.npmjs.com/package/mongoose) and [Express](https://www.npmjs.com/package/express) dependencies were installed in [Visual Studio Code](https://code.visualstudio.com/) by typing "npm i mongoose" and "npm i express".
 
 ## License
 #### This project is licensed by:  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -26,7 +26,7 @@
 ### You can find information about MIT license here: [MIT License.](https://choosealicense.com/licenses/mit/)
 
 ## Usage
-#### To use this application we need to change the  end point of the API depending on what the user wants do to. For example, if the user wants to create a new user, the `users` end point is needed `http://localhost:3001/api/users` and the input for user and email in [Insomnia](https://insomnia.rest/)
+#### To use this application, we need to change the end point of the API, depending on what the user wants do to. For example, if the user wants to create a new user, the `users` end point is needed `http://localhost:3001/api/users` and the input for user and email in [Insomnia](https://insomnia.rest/).
 
 
 ## Credits
@@ -34,7 +34,7 @@
 
 ## Test
 
-#### In order to test this  application, we need to have [Insomnia](https://insomnia.rest/) software, clone [Social Network API](https://github.com/SantiBass/the-rain-of-fire-will-refresh-your-social-network-api) code or download the zip file. Once the files are in your [Visual Studio Code](https://code.visualstudio.com/) open an integrated terminal and run this command line `"nomdemon server".` After the application is running in [Visual Studio Code](https://code.visualstudio.com/), we can test the end points. For example  GET `http://localhost:3001/api/users/` to get all the users or DELETE `http://localhost:5002/api/users/enter-user-id-here`
+#### In order to test this  application, we need to have [Insomnia](https://insomnia.rest/) software, clone [Social Network API](https://github.com/SantiBass/the-rain-of-fire-will-refresh-your-social-network-api) code or download the zip file. Once the files are in your [Visual Studio Code](https://code.visualstudio.com/), open an integrated terminal and run this command line `"nomdemon server".` After the application is running in [Visual Studio Code](https://code.visualstudio.com/), we can test the end points. For example, GET `http://localhost:3001/api/users/` to get all the users or DELETE `http://localhost:5002/api/users/enter-user-id-here`
 
 ## GitHub
 
