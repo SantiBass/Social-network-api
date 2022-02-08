@@ -88,7 +88,7 @@ const thoughtController = {
           $pull: { reactions: body}  
         },
         {
-            nwe: true
+            new: true
         })
       .then(dbThoughtData => res.json(dbThoughtData))
       .catch(err => res.json(err));

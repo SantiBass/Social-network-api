@@ -24,12 +24,12 @@ router
 
 // route to add reaction
 router
-    .route("/:thoughtId:/reactions")
+    .route("/:thoughtId/reactions")
     .post(addReaction)
 
     // route to delete reaction ID
 router
-    .route('/thoughts/:thoughtId/reactions')
+    .route("/:thoughtId/reactions/:reactionId")
     .delete(deleteReaction)
 
 
