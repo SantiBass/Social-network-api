@@ -53,7 +53,7 @@
 ### If you have any questions, please send me an email @ sibarraryan@gmail.com . 
 ### You can visit my GitHub: [SantiBass.](https://github.com/SantiBass)
 ### Here is a short video of the app in action: [Social Network API video]() .
-### Also, you can put this application into action by using this link: [The Tech Blog](https://devcenter.heroku.com/) .
+
 
 
 
