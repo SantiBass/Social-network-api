@@ -34,7 +34,7 @@
 
 ## Test
 
-#### In order to test this  application, we need to have [Insomnia](https://insomnia.rest/) software, clone [Social Network API](https://github.com/SantiBass/the-rain-of-fire-will-refresh-your-social-network-api) code or download the zip file. Once the files are in your [Visual Studio Code](https://code.visualstudio.com/), open an integrated terminal and run this command line `"nomdemon server".` After the application is running in [Visual Studio Code](https://code.visualstudio.com/), we can test the end points. For example, GET `http://localhost:3001/api/users/` to get all the users or DELETE `http://localhost:5002/api/users/enter-user-id-here` to delete a user.
+#### In order to test this  application, we need to have [Insomnia](https://insomnia.rest/) software, clone [Social Network API](https://github.com/SantiBass/the-rain-of-fire-will-refresh-your-social-network-api) code and/or download the zip file. Once the files are in your [Visual Studio Code](https://code.visualstudio.com/), open an integrated terminal and run this command line `"nomdemon server".` After the application is running in [Visual Studio Code](https://code.visualstudio.com/), we can test the end points. For example, GET `http://localhost:3001/api/users/` to get all the users or DELETE `http://localhost:5002/api/users/enter-user-id-here` to delete a user.
 
 ## GitHub
 
