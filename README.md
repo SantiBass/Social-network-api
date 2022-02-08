@@ -6,7 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description.
-### "The Social Network API" is a project that allows the users create, add, update and or delete, users. Also, the user is able to add a friends, create  or delete thoughts, reactions, or friends.
+### "The Social Network API" is an application that allows the users to create, add, update and or delete, users. Also, the users are able to add a friends, create or delete thoughts, or reactions.
+## Table of Content
 * [Installation](#installation)
 * [License](#license)
 * [Usage](#usage)
