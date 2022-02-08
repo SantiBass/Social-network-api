@@ -52,7 +52,7 @@
 ## Questions
 ### If you have any questions, please send me an email @ sibarraryan@gmail.com . 
 ### You can visit my GitHub: [SantiBass](https://github.com/SantiBass), or the [Social Network API](https://github.com/SantiBass/the-rain-of-fire-will-refresh-your-social-network-api) repository.
-### Here is a short video of the app in action: [Social Network API video]() .
+### Here is a short two parts video of the app in action: Social Network API [part 1](https://watch.screencastify.com/v/QlZPVo1gsTt1XmKFHBwk)  and [part 2](https://watch.screencastify.com/v/Uz66pm5To8yb03G9F9UZ).
 
 
 
